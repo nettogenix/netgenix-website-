@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="NETGENIX INNOVATIONS LTD - Professional IT solutions provider offering network infrastructure, cloud solutions, cybersecurity, and custom software development.">
+<meta name="keywords" content="IT solutions, network infrastructure, cloud services, cybersecurity, software development, IT consulting">
+<meta name="author" content="NETGENIX INNOVATIONS LTD">
+<meta property="og:title" content="NETGENIX INNOVATIONS LTD - IT Solutions Provider">
+<meta property="og:description" content="Transform your business with cutting-edge IT solutions. We provide network infrastructure, cloud solutions, cybersecurity, and custom software development.">
+<meta property="og:type" content="website">
+<title>NETGENIX INNOVATIONS LTD - IT Solutions Provider</title>
+<style>
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+:root {
+--primary: #00d4ff;
+--dark: #0a1628;
+--darker: #070f1a;
+--light: #f8f9fa;
+--text: #b0c4de;
+--text-dark: #4a5568;
+--accent: #0066cc;
+}
+
+html {
+scroll-behavior: smooth;
+}
+
+body {
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+background: var(--dark);
+color: var(--light);
+overflow-x: hidden;
+}
+
+/* Skip to content link */
+.skip-to-content {
+position: absolute;
+top: -40px;
+left: 0;
+background: var(--primary);
+color: var(--dark);
+padding: 0.5rem 1rem;
+text-decoration: none;
+z-index: 100;
+}
+
+.skip-to-content:focus {
+top: 0;
+}
+
+/* Navigation */
+nav {
+position: fixed;
+top: 0;
+width: 100%;
+padding: 1rem 5%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+background: rgba(10, 22, 40, 0.95);
+backdrop-filter: blur(10px);
+z-index: 1000;
+border-bottom: 1px solid rgba(0, 212, 255, 0.1);
+}
+
+.logo {
+font-size: 1.5rem;
+font-weight: 700;
+color: var(--primary);
+text-decoration: none;
+display: flex;
+align-items: center;
+gap: 0.5rem;
+}
+
+.logo span {
+color: var(--light);
+font-weight: 400;
+font-size: 1rem;
+}
+
+.logo:focus-visible {
+outline: 2px solid var(--primary);
+outline-offset: 4px;
+}
+
+.nav-links {
+display: flex;
+gap: 2rem;
+list-style: none;
+}
+
+.nav-links a {
+color: var(--text);
+text-decoration: none;
+font-size: 0.9rem;
+transition: color 0.3s;
+position: relative;
+}
+
+.nav-links a:hover {
+color: var(--primary);
+}
+
+.nav-links a:focus-visible {
+outline: 2px solid var(--primary);
+outline-offset: 4px;
+}
+
+.nav-links a::after {
+content: '';
+position: absolute;
+bottom: -5px;
+left: 0;
+width: 0;
+height: 2px;
+background: var(--primary);
+transition: width 0.3s;
+}
+
+.nav-links a:hover::after {
+width: 100%;
+}
+
+.mobile-menu {
+display: none;
+font-size: 1.5rem;
+color: var(--primary);
+cursor: pointer;
+background: none;
+border: none;
+padding: 0.5rem;
+align-items: center;
+justify-content: center;
+}
+
+.mobile-menu:focus-visible {
+outline: 2px solid var(--primary);
+outline-offset: 4px;
+}
+
+.mobile-menu.active {
+color: var(--accent);
+}
+
+/* Hero Section */
+.hero {
+min-height: 100vh;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;
+position: relative;
+padding: 2rem;
+margin-top: 60px;
+background: radial-gradient(circle at center, rgba(0, 212, 255, 0.05) 0%, transparent 70%);
+}
+
+.hero-bg {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+overflow: hidden;
+z-index: -1;
+}
+
+.network-node {
+position: absolute;
+width: 4px;
+height: 4px;
+background: var(--primary);
+border-radius: 50%;
+opacity: 0.3;
+animation: float 15s infinite ease-in-out;
+}
+
+@keyframes float {
+0%, 100% { transform: translateY(0) translateX(0); opacity: 0.3; }
+50% { transform: translateY(-30px) translateX(20px); opacity: 0.6; }
+}
+
+.hero h1 {
+font-size: 4rem;
+font-weight: 800;
+color: var(--light);
+margin-bottom: 0.5rem;
+letter-spacing: 2px;
+animation: fadeInUp 1s ease-out;
+}
+
+.hero .subtitle {
+font-size: 1.2rem;
+color: var(--primary);
+margin-bottom: 1rem;
+letter-spacing: 4px;
+animation: fadeInUp 1s ease-out 0.2s both;
+}
+
+.hero .slogan {
+font-size: 1.5rem;
+color: var(--text);
+font-style: italic;
+margin-bottom: 0.5rem;
+animation: fadeInUp 1s ease-out 0.4s both;
+}
+
+.hero .tagline {
+font-size: 0.9rem;
+color: var(--text-dark);
+letter-spacing: 2px;
+margin-bottom: 2rem;
+animation: fadeInUp 1s ease-out 0.6s both;
+}
+
+.cta-btn {
+display: inline-block;
+padding: 1rem 3rem;
+background: var(--primary);
+color: var(--dark);
+text-decoration: none;
+font-weight: 700;
+border-radius: 50px;
+transition: all 0.3s;
+animation: fadeInUp 1s ease-out 0.8s both;
+border: 2px solid var(--primary);
+}
+
+.cta-btn:hover {
+background: transparent;
+color: var(--primary);
+transform: translateY(-3px);
+box-shadow: 0 10px 30px rgba(0, 212, 255, 0.3);
+}
+
+.cta-btn:focus-visible {
+outline: 2px solid var(--accent);
+outline-offset: 4px;
+}
+
+.back-to-top {
+position: fixed;
+bottom: 2rem;
+right: 2rem;
+width: 50px;
+height: 50px;
+background: var(--primary);
+color: var(--dark);
+border: none;
+border-radius: 50%;
+font-size: 1.5rem;
+cursor: pointer;
+display: none;
+align-items: center;
+justify-content: center;
+transition: all 0.3s;
+z-index: 999;
+}
+
+.back-to-top:hover {
+transform: translateY(-3px);
+box-shadow: 0 10px 30px rgba(0, 212, 255, 0.3);
+}
+
+.back-to-top:focus-visible {
+outline: 2px solid var(--accent);
+outline-offset: 4px;
+}
+
+.back-to-top.show {
+display: flex;
+}
+
+@keyframes fadeInUp {
+from {
+opacity: 0;
+transform: translateY(30px);
+}
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+
+/* Section Styling */
+section {
+padding: 5rem 10%;
+}
+
+.section-title {
+font-size: 2.5rem;
+font-weight: 700;
+text-align: center;
+margin-bottom: 1rem;
+color: var(--light);
+}
+
+.section-subtitle {
+text-align: center;
+color: var(--text);
+margin-bottom: 3rem;
+font-size: 1rem;
+}
+
+/* About Section */
+.about {
+background: var(--darker);
+}
+
+.about-content {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 4rem;
+align-items: start;
+}
+
+.about-text h3 {
+font-size: 2rem;
+color: var(--primary);
+margin-bottom: 1rem;
+}
+
+.about-text p {
+color: var(--text);
+line-height: 1.8;
+margin-bottom: 1rem;
+}
+
+.about-stats {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 1.5rem;
+margin-top: 2rem;
+}
+
+.stat-box {
+background: rgba(0, 212, 255, 0.05);
+border: 1px solid rgba(0, 212, 255, 0.1);
+padding: 1.5rem;
+border-radius: 10px;
+text-align: center;
+transition: all 0.3s;
+}
+
+.stat-box:hover {
+border-color: var(--primary);
+transform: translateY(-5px);
+}
+
+.stat-number {
+font-size: 2rem;
+font-weight: 700;
+color: var(--primary);
+}
+
+.stat-label {
+font-size: 0.8rem;
+color: var(--text);
+margin-top: 0.5rem;
+}
+
+/* Services Section */
+.services-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+gap: 2rem;
+}
+
+.service-card {
+background: rgba(0, 212, 255, 0.03);
+border: 1px solid rgba(0, 212, 255, 0.1);
+padding: 2.5rem;
+border-radius: 15px;
+transition: all 0.3s;
+position: relative;
+overflow: hidden;
+}
+
+.service-card::before {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 3px;
+background: linear-gradient(90deg, var(--primary), transparent);
+transform: scaleX(0);
+transform-origin: left;
+transition: transform 0.3s;
+}
+
+.service-card:hover::before {
+transform: scaleX(1);
+}
+
+.service-card:hover {
+border-color: var(--primary);
+transform: translateY(-10px);
+box-shadow: 0 20px 40px rgba(0, 212, 255, 0.1);
+}
+
+.service-card:focus-within {
+border-color: var(--accent);
+box-shadow: 0 20px 40px rgba(0, 102, 204, 0.1);
+}
+
+.service-icon {
+font-size: 2.5rem;
+margin-bottom: 1rem;
+}
+
+.service-card h3 {
+font-size: 1.3rem;
+color: var(--light);
+margin-bottom: 1rem;
+}
+
+.service-card p {
+color: var(--text);
+line-height: 1.6;
+font-size: 0.9rem;
+}
+
+/* Contact Section */
+.contact {
+background: var(--darker);
+}
+
+.contact-container {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 4rem;
+}
+
+.contact-info h3 {
+font-size: 1.5rem;
+color: var(--primary);
+margin-bottom: 1.5rem;
+}
+
+.contact-item {
+display: flex;
+align-items: center;
+gap: 1rem;
+margin-bottom: 1.5rem;
+color: var(--text);
+}
+
+.contact-item .icon {
+width: 40px;
+height: 40px;
+background: rgba(0, 212, 255, 0.1);
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+color: var(--primary);
+font-size: 1.2rem;
+flex-shrink: 0;
+}
+
+.contact-form {
+background: rgba(0, 212, 255, 0.03);
+border: 1px solid rgba(0, 212, 255, 0.1);
+padding: 2.5rem;
+border-radius: 15px;
+}
+
+.form-group {
+margin-bottom: 1.5rem;
+}
+
+.form-group label {
+display: block;
+color: var(--text);
+margin-bottom: 0.5rem;
+font-size: 0.9rem;
+font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+width: 100%;
+padding: 0.8rem 1rem;
+background: rgba(0, 212, 255, 0.05);
+border: 1px solid rgba(0, 212, 255, 0.2);
+border-radius: 8px;
+color: var(--light);
+font-family: inherit;
+transition: all 0.3s;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+color: rgba(176, 196, 222, 0.6);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+outline: none;
+border-color: var(--primary);
+box-shadow: 0 0 10px rgba(0, 212, 255, 0.2);
+background: rgba(0, 212, 255, 0.08);
+}
+
+.form-group textarea {
+min-height: 120px;
+resize: vertical;
+}
+
+.form-status {
+margin-top: 1rem;
+padding: 1rem;
+border-radius: 8px;
+text-align: center;
+display: none;
+}
+
+.form-status.success {
+background: rgba(34, 197, 94, 0.1);
+color: #22c55e;
+border: 1px solid rgba(34, 197, 94, 0.3);
+display: block;
+}
+
+.form-status.error {
+background: rgba(239, 68, 68, 0.1);
+color: #ef4444;
+border: 1px solid rgba(239, 68, 68, 0.3);
+display: block;
+}
+
+.submit-btn {
+width: 100%;
+padding: 1rem;
+background: var(--primary);
+color: var(--dark);
+border: none;
+border-radius: 8px;
+font-weight: 700;
+font-size: 1rem;
+cursor: pointer;
+transition: all 0.3s;
+}
+
+.submit-btn:hover {
+background: transparent;
+color: var(--primary);
+border: 2px solid var(--primary);
+}
+
+.submit-btn:focus-visible {
+outline: 2px solid var(--accent);
+outline-offset: 4px;
+}
+
+.submit-btn:disabled {
+opacity: 0.6;
+cursor: not-allowed;
+}
+
+/* Footer */
+footer {
+background: var(--dark);
+border-top: 1px solid rgba(0, 212, 255, 0.1);
+padding: 2rem 10%;
+text-align: center;
+color: var(--text);
+}
+
+footer .logo {
+justify-content: center;
+margin-bottom: 1rem;
+}
+
+.social-links {
+display: flex;
+justify-content: center;
+gap: 1.5rem;
+margin: 1.5rem 0;
+}
+
+.social-links a {
+color: var(--text);
+font-size: 1.3rem;
+transition: color 0.3s;
+text-decoration: none;
+display: inline-flex;
+align-items: center;
+justify-content: center;
+width: 40px;
+height: 40px;
+border-radius: 50%;
+background: rgba(0, 212, 255, 0.05);
+}
+
+.social-links a:hover {
+color: var(--primary);
+background: rgba(0, 212, 255, 0.1);
+}
+
+.social-links a:focus-visible {
+outline: 2px solid var(--accent);
+outline-offset: 2px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+.nav-links {
+position: fixed;
+top: 60px;
+left: 0;
+right: 0;
+flex-direction: column;
+gap: 0;
+background: rgba(10, 22, 40, 0.98);
+padding: 2rem;
+max-height: calc(100vh - 60px);
+overflow-y: auto;
+border-bottom: 1px solid rgba(0, 212, 255, 0.1);
+}
+
+.nav-links.hidden {
+display: none !important;
+}
+
+.mobile-menu {
+display: flex;
+}
+
+.hero {
+margin-top: 80px;
+}
+
+.hero h1 {
+font-size: 2.5rem;
+}
+
+.hero .subtitle {
+font-size: 1rem;
+}
+
+.hero .slogan {
+font-size: 1.2rem;
+}
+
+.about-content,
+.contact-container {
+grid-template-columns: 1fr;
+gap: 2rem;
+}
+
+.about-stats {
+grid-template-columns: 1fr;
+}
+
+section {
+padding: 3rem 5%;
+}
+
+.back-to-top {
+bottom: 1rem;
+right: 1rem;
+width: 40px;
+height: 40px;
+font-size: 1.2rem;
+}
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+width: 8px;
+}
+
+::-webkit-scrollbar-track {
+background: var(--dark);
+}
+
+::-webkit-scrollbar-thumb {
+background: var(--primary);
+border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+background: var(--accent);
+}
+</style>
+</head>
+<body>
+
+<!-- Skip to content link for accessibility -->
+<a href="#main" class="skip-to-content">Skip to main content</a>
+
+<!-- Navigation -->
+<nav role="navigation" aria-label="Main navigation">
+<a href="#home" class="logo">
+NETGENIX <span>INNOVATIONS LTD</span>
+</a>
+<ul class="nav-links" id="nav-menu">
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+<button class="mobile-menu" id="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">☰</button>
+</nav>
+
+<!-- Main Content -->
+<main id="main">
+
+<!-- Hero Section -->
+<section class="hero" id="home" role="banner">
+<div class="hero-bg" id="network-bg" aria-hidden="true"></div>
+<h1>NETGENIX</h1>
+<div class="subtitle" aria-label="Company tagline">INNOVATIONS LTD</div>
+<div class="slogan" aria-label="Company motto">"Wiring Tomorrow, Today."</div>
+<div class="tagline">IT SOLUTIONS PROVIDER</div>
+<a href="#contact" class="cta-btn">Get Started</a>
+</section>
+
+<!-- About Section -->
+<section class="about" id="about" aria-labelledby="about-title">
+<h2 class="section-title" id="about-title">About Us</h2>
+<p class="section-subtitle">Where Networks Meet Genius</p>
+
+<div class="about-content">
+<div class="about-text">
+<h3>Your Technology Partner</h3>
+<p>NETGENIX INNOVATIONS LTD is a forward-thinking IT solutions provider dedicated to transforming how businesses leverage technology. We specialize in building robust digital infrastructure, custom software solutions, and enterprise-level security frameworks that empower organizations to thrive in the digital age.</p>
+<p>Our team of certified engineers and developers brings together deep technical expertise with a genuine understanding of business needs. We don't just implement technology — we architect solutions that drive measurable business outcomes and create lasting competitive advantages for our clients.</p>
+
+<div class="about-stats">
+<div class="stat-box">
+<div class="stat-number">50+</div>
+<div class="stat-label">Projects Delivered</div>
+</div>
+<div class="stat-box">
+<div class="stat-number">98%</div>
+<div class="stat-label">Client Satisfaction</div>
+</div>
+<div class="stat-box">
+<div class="stat-number">24/7</div>
+<div class="stat-label">Support Available</div>
+</div>
+</div>
+</div>
+<div class="about-text">
+<h3>Why Choose Us?</h3>
+<p>✓ <strong>End-to-End Solutions</strong> — From planning to deployment and maintenance, we handle it all.</p>
+<p>✓ <strong>Cutting-Edge Tech</strong> — We stay ahead of the curve so your business does too.</p>
+<p>✓ <strong>Scalable Architecture</strong> — Solutions built to grow with your business.</p>
+<p>✓ <strong>Transparent Pricing</strong> — No hidden fees. No surprises. Just honest value.</p>
+<p>✓ <strong>Expert Team</strong> — Certified professionals with years of industry experience.</p>
+<p>✓ <strong>Dedicated Support</strong> — Your success is our priority, always.</p>
+</div>
+</div>
+</section>
+
+<!-- Services Section -->
+<section id="services" aria-labelledby="services-title">
+<h2 class="section-title" id="services-title">Our Services</h2>
+<p class="section-subtitle">Comprehensive IT Solutions for Modern Businesses</p>
+
+<div class="services-grid">
+<div class="service-card">
+<div class="service-icon" aria-hidden="true">🌐</div>
+<h3>Network Infrastructure</h3>
+<p>Design, implementation, and management of secure, high-performance network architectures tailored to your organization's needs. From LANs to WANs, we build the backbone of your digital operations.</p>
+</div>
+
+<div class="service-card">
+<div class="service-icon" aria-hidden="true">💻</div>
+<h3>Custom Software Development</h3>
+<p>Bespoke web and mobile applications built with modern frameworks. From MVPs to enterprise systems, we code it right using best practices and proven methodologies.</p>
+</div>
+
+<div class="service-card">
+<div class="service-icon" aria-hidden="true">☁️</div>
+<h3>Cloud Solutions</h3>
+<p>Cloud migration, architecture, and management on AWS, Azure, and Google Cloud. Optimize costs and scale effortlessly with our cloud expertise and strategic guidance.</p>
+</div>
+
+<div class="service-card">
+<div class="service-icon" aria-hidden="true">🔒</div>
+<h3>Cybersecurity</h3>
+<p>Comprehensive security audits, threat monitoring, and compliance solutions to protect your digital assets 24/7. Proactive defense against evolving cyber threats.</p>
+</div>
+
+<div class="service-card">
+<div class="service-icon" aria-hidden="true">📊</div>
+<h3>Data Analytics & AI</h3>
+<p>Transform raw data into actionable insights. Business intelligence dashboards, predictive analytics, and AI integration to drive smarter decisions.</p>
+</div>
+
+<div class="service-card">
+<div class="service-icon" aria-hidden="true">🔧</div>
+<h3>IT Support & Consulting</h3>
+<p>Strategic technology consulting and responsive IT support to keep your operations running smoothly around the clock. Your dedicated technology partner.</p>
+</div>
+</div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact" id="contact" aria-labelledby="contact-title">
+<h2 class="section-title" id="contact-title">Get In Touch</h2>
+<p class="section-subtitle">Ready to wire your tomorrow? Let's talk.</p>
+
+<div class="contact-container">
+<div class="contact-info">
+<h3>Contact Information</h3>
+
+<div class="contact-item">
+<div class="icon" aria-hidden="true">📍</div>
+<div>
+<strong>Address</strong><br>
+<address>Your Business Address Here</address>
+</div>
+</div>
+
+<div class="contact-item">
+<div class="icon" aria-hidden="true">📧</div>
+<div>
+<strong>Email</strong><br>
+<a href="mailto:info@netgenix.com">info@netgenix.com</a>
+</div>
+</div>
+
+<div class="contact-item">
+<div class="icon" aria-hidden="true">📞</div>
+<div>
+<strong>Phone</strong><br>
+<a href="tel:+1234567890">+1 (234) 567-8900</a>
+</div>
+</div>
+
+<div class="contact-item">
+<div class="icon" aria-hidden="true">🕐</div>
+<div>
+<strong>Business Hours</strong><br>
+Mon - Fri: 8:00 AM - 6:00 PM
+</div>
+</div>
+</div>
+
+<div class="contact-form">
+<form id="contact-form" novalidate>
+<div class="form-group">
+<label for="name">Your Name <span aria-label="required">*</span></label>
+<input type="text" id="name" name="name" placeholder="John Doe" required>
+<span class="error-message" id="name-error" style="display: none; color: #ef4444; font-size: 0.85rem;"></span>
+</div>
+<div class="form-group">
+<label for="email">Email Address <span aria-label="required">*</span></label>
+<input type="email" id="email" name="email" placeholder="john@example.com" required>
+<span class="error-message" id="email-error" style="display: none; color: #ef4444; font-size: 0.85rem;"></span>
+</div>
+<div class="form-group">
+<label for="subject">Subject</label>
+<input type="text" id="subject" name="subject" placeholder="How can we help?">
+</div>
+<div class="form-group">
+<label for="message">Message <span aria-label="required">*</span></label>
+<textarea id="message" name="message" placeholder="Tell us about your project..." required></textarea>
+<span class="error-message" id="message-error" style="display: none; color: #ef4444; font-size: 0.85rem;"></span>
+</div>
+<button type="submit" class="submit-btn" id="submit-btn">Send Message</button>
+<div class="form-status" id="form-status" role="status" aria-live="polite"></div>
+</form>
+</div>
+</div>
+</section>
+
+</main>
+
+<!-- Back to Top Button -->
+<button class="back-to-top" id="back-to-top" aria-label="Back to top" title="Back to top">↑</button>
+
+<!-- Footer -->
+<footer role="contentinfo">
+<div class="logo">NETGENIX <span>INNOVATIONS LTD</span></div>
+<p>"Wiring Tomorrow, Today."</p>
+<div class="social-links" aria-label="Social media links">
+<a href="https://twitter.com/netgenix" aria-label="Follow us on X (Twitter)" title="X (Twitter)">𝕏</a>
+<a href="https://linkedin.com/company/netgenix" aria-label="Connect with us on LinkedIn" title="LinkedIn">in</a>
+<a href="https://facebook.com/netgenix" aria-label="Like us on Facebook" title="Facebook">f</a>
+<a href="https://instagram.com/netgenix" aria-label="Follow us on Instagram" title="Instagram">📷</a>
+</div>
+<p style="font-size: 0.8rem; margin-top: 1rem;">
+© 2026 NETGENIX INNOVATIONS LTD. All rights reserved.
+</p>
+</footer>
+
+<script>
+// ============= Mobile Menu Toggle =============
+const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+const navMenu = document.getElementById('nav-menu');
+
+mobileMenuBtn.addEventListener('click', () => {
+  const isOpen = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
+  mobileMenuBtn.setAttribute('aria-expanded', !isOpen);
+  mobileMenuBtn.classList.toggle('active');
+  navMenu.classList.toggle('hidden');
+});
+
+// Close menu when a link is clicked
+navMenu.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    mobileMenuBtn.setAttribute('aria-expanded', 'false');
+    mobileMenuBtn.classList.remove('active');
+    navMenu.classList.add('hidden');
+  });
+});
+
+// ============= Animated Network Background =============
+const bg = document.getElementById('network-bg');
+for (let i = 0; i < 30; i++) {
+  const node = document.createElement('div');
+  node.className = 'network-node';
+  node.style.left = Math.random() * 100 + '%';
+  node.style.top = Math.random() * 100 + '%';
+  node.style.animationDelay = Math.random() * 15 + 's';
+  node.style.animationDuration = (10 + Math.random() * 10) + 's';
+  bg.appendChild(node);
+}
+
+// ============= Back to Top Button =============
+const backToTopBtn = document.getElementById('back-to-top');
+const scrollThreshold = 300;
+
+window.addEventListener('scroll', () => {
+  if (window.pageYOffset > scrollThreshold) {
+    backToTopBtn.classList.add('show');
+  } else {
+    backToTopBtn.classList.remove('show');
+  }
+});
+
+backToTopBtn.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+// ============= Form Handling =============
+const contactForm = document.getElementById('contact-form');
+const submitBtn = document.getElementById('submit-btn');
+const formStatus = document.getElementById('form-status');
+
+contactForm.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  
+  // Clear previous messages
+  formStatus.className = 'form-status';
+  formStatus.textContent = '';
+  
+  // Validate form
+  const nameField = document.getElementById('name');
+  const emailField = document.getElementById('email');
+  const messageField = document.getElementById('message');
+  
+  let isValid = true;
+  
+  // Reset error messages
+  document.querySelectorAll('.error-message').forEach(el => el.style.display = 'none');
+  
+  if (!nameField.value.trim()) {
+    document.getElementById('name-error').textContent = 'Name is required';
+    document.getElementById('name-error').style.display = 'block';
+    isValid = false;
+  }
+  
+  if (!emailField.value.trim() || !isValidEmail(emailField.value)) {
+    document.getElementById('email-error').textContent = 'Valid email is required';
+    document.getElementById('email-error').style.display = 'block';
+    isValid = false;
+  }
+  
+  if (!messageField.value.trim()) {
+    document.getElementById('message-error').textContent = 'Message is required';
+    document.getElementById('message-error').style.display = 'block';
+    isValid = false;
+  }
+  
+  if (!isValid) return;
+  
+  // Disable button and show loading state
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Sending...';
+  
+  try {
+    // Simulate form submission (replace with actual backend call)
+    await new Promise(resolve => setTimeout(resolve, 1500));
+    
+    // Success message
+    formStatus.className = 'form-status success';
+    formStatus.textContent = '✓ Thank you for reaching out! We will get back to you shortly.';
+    
+    // Reset form
+    contactForm.reset();
+    
+    // Clear success message after 5 seconds
+    setTimeout(() => {
+      formStatus.className = 'form-status';
+      formStatus.textContent = '';
+    }, 5000);
+  } catch (error) {
+    formStatus.className = 'form-status error';
+    formStatus.textContent = '✗ An error occurred. Please try again.';
+  } finally {
+    submitBtn.disabled = false;
+    submitBtn.textContent = 'Send Message';
+  }
+});
+
+// Email validation helper
+function isValidEmail(email) {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+}
+</script>
+
+</body>
+</html>
