@@ -188,21 +188,21 @@ animation: float 15s infinite ease-in-out;
 50% { transform: translateY(-30px) translateX(20px); opacity: 0.6; }
 }
 
-.hero h1 {
-font-size: 4rem;
-font-weight: 800;
-color: var(--light);
-margin-bottom: 0.5rem;
-letter-spacing: 2px;
-animation: fadeInUp 1s ease-out;
+.hero-logo {
+width: 100%;
+max-width: 500px;
+height: auto;
+margin-bottom: 2rem;
+animation: fadeInDown 1s ease-out;
 }
 
-.hero .subtitle {
-font-size: 1.2rem;
-color: var(--primary);
-margin-bottom: 1rem;
-letter-spacing: 4px;
-animation: fadeInUp 1s ease-out 0.2s both;
+.hero-logo svg {
+filter: drop-shadow(0 0 20px rgba(0, 212, 255, 0.3));
+transition: filter 0.3s ease;
+}
+
+.hero-logo:hover svg {
+filter: drop-shadow(0 0 30px rgba(0, 212, 255, 0.5));
 }
 
 .hero .slogan {
@@ -210,7 +210,7 @@ font-size: 1.5rem;
 color: var(--text);
 font-style: italic;
 margin-bottom: 0.5rem;
-animation: fadeInUp 1s ease-out 0.4s both;
+animation: fadeInUp 1s ease-out 0.2s both;
 }
 
 .hero .tagline {
@@ -218,7 +218,7 @@ font-size: 0.9rem;
 color: var(--text-dark);
 letter-spacing: 2px;
 margin-bottom: 2rem;
-animation: fadeInUp 1s ease-out 0.6s both;
+animation: fadeInUp 1s ease-out 0.4s both;
 }
 
 .cta-btn {
@@ -230,7 +230,7 @@ text-decoration: none;
 font-weight: 700;
 border-radius: 50px;
 transition: all 0.3s;
-animation: fadeInUp 1s ease-out 0.8s both;
+animation: fadeInUp 1s ease-out 0.6s both;
 border: 2px solid var(--primary);
 }
 
@@ -283,6 +283,17 @@ display: flex;
 from {
 opacity: 0;
 transform: translateY(30px);
+}
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+
+@keyframes fadeInDown {
+from {
+opacity: 0;
+transform: translateY(-30px);
 }
 to {
 opacity: 1;
@@ -640,16 +651,16 @@ display: flex;
 margin-top: 80px;
 }
 
-.hero h1 {
-font-size: 2.5rem;
-}
-
-.hero .subtitle {
-font-size: 1rem;
+.hero-logo {
+max-width: 300px;
 }
 
 .hero .slogan {
 font-size: 1.2rem;
+}
+
+.hero .tagline {
+font-size: 0.85rem;
 }
 
 .about-content,
@@ -719,8 +730,69 @@ NETGENIX <span>INNOVATIONS LTD</span>
 <!-- Hero Section -->
 <section class="hero" id="home" role="banner">
 <div class="hero-bg" id="network-bg" aria-hidden="true"></div>
-<h1>NETGENIX</h1>
-<div class="subtitle" aria-label="Company tagline">INNOVATIONS LTD</div>
+
+<!-- NETGENIX Logo SVG -->
+<div class="hero-logo" aria-label="NETGENIX Innovations Ltd Logo">
+<svg viewBox="0 0 786 782" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+<!-- Border -->
+<rect x="25" y="25" width="735" height="735" fill="none" stroke="#00d4ff" stroke-width="2" opacity="0.3" rx="20"/>
+
+<!-- Corner Elements -->
+<line x1="25" y1="80" x2="25" y2="25" stroke="#00d4ff" stroke-width="2" opacity="0.6"/>
+<line x1="25" y1="25" x2="80" y2="25" stroke="#00d4ff" stroke-width="2" opacity="0.6"/>
+
+<line x1="761" y1="80" x2="761" y2="25" stroke="#00d4ff" stroke-width="2" opacity="0.6"/>
+<line x1="761" y1="25" x2="706" y2="25" stroke="#00d4ff" stroke-width="2" opacity="0.6"/>
+
+<line x1="25" y1="706" x2="25" y2="761" stroke="#00d4ff" stroke-width="2" opacity="0.6"/>
+<line x1="25" y1="761" x2="80" y2="761" stroke="#00d4ff" stroke-width="2" opacity="0.6"/>
+
+<line x1="761" y1="706" x2="761" y2="761" stroke="#00d4ff" stroke-width="2" opacity="0.6"/>
+<line x1="761" y1="761" x2="706" y2="761" stroke="#00d4ff" stroke-width="2" opacity="0.6"/>
+
+<!-- Center Network Circle -->
+<!-- Main Circle -->
+<circle cx="393" cy="245" r="65" fill="none" stroke="#00d4ff" stroke-width="15" opacity="0.9"/>
+<circle cx="393" cy="245" r="40" fill="#0a1628" stroke="#00d4ff" stroke-width="3"/>
+
+<!-- Connected Nodes -->
+<!-- Top Left -->
+<circle cx="300" cy="170" r="25" fill="#00d4ff" opacity="0.8"/>
+<line x1="370" y1="210" x2="320" y2="180" stroke="#00d4ff" stroke-width="2" opacity="0.5"/>
+
+<!-- Top Right -->
+<circle cx="486" cy="170" r="25" fill="#00d4ff" opacity="0.8"/>
+<line x1="416" y1="210" x2="466" y2="180" stroke="#00d4ff" stroke-width="2" opacity="0.5"/>
+
+<!-- Right -->
+<circle cx="550" cy="245" r="18" fill="#00d4ff" opacity="0.7"/>
+<line x1="458" y1="245" x2="532" y2="245" stroke="#00d4ff" stroke-width="2" opacity="0.5"/>
+
+<!-- Bottom -->
+<circle cx="393" cy="330" r="25" fill="#00d4ff" opacity="0.8"/>
+<line x1="393" y1="310" x2="393" y2="355" stroke="#00d4ff" stroke-width="2" opacity="0.5"/>
+
+<!-- Small Connector Nodes -->
+<circle cx="360" cy="220" r="8" fill="#00d4ff" opacity="0.6"/>
+<circle cx="426" cy="220" r="8" fill="#00d4ff" opacity="0.6"/>
+<circle cx="450" cy="245" r="8" fill="#00d4ff" opacity="0.6"/>
+
+<!-- Text -->
+<text x="393" y="450" font-family="Arial, sans-serif" font-size="48" font-weight="bold" text-anchor="middle" fill="#f8f9fa" letter-spacing="3">NETGENIX</text>
+<text x="393" y="490" font-family="Arial, sans-serif" font-size="22" text-anchor="middle" fill="#00d4ff" letter-spacing="4">INNOVATIONS LTD</text>
+
+<!-- Horizontal Line -->
+<line x1="240" y1="510" x2="546" y2="510" stroke="#00d4ff" stroke-width="1" opacity="0.4"/>
+
+<!-- Tagline -->
+<text x="393" y="545" font-family="Arial, sans-serif" font-size="18" font-style="italic" text-anchor="middle" fill="#b0c4de">Wiring Tomorrow,</text>
+<text x="393" y="575" font-family="Arial, sans-serif" font-size="18" font-style="italic" text-anchor="middle" fill="#b0c4de">Today.</text>
+
+<!-- Bottom Text -->
+<text x="393" y="680" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#4a5568" letter-spacing="2">IT SOLUTIONS PROVIDER</text>
+</svg>
+</div>
+
 <div class="slogan" aria-label="Company motto">"Wiring Tomorrow, Today."</div>
 <div class="tagline">IT SOLUTIONS PROVIDER</div>
 <a href="#contact" class="cta-btn">Get Started</a>
